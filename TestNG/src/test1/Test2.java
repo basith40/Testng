@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 public class Test2 implements ITestListener {
 	WebDriver driver;
 
-	//@Test
+	// @Test
 	public void linkbroke() throws MalformedURLException, IOException, InterruptedException {
 		driver = new SafariDriver();
 		driver.manage().window().maximize();
@@ -48,32 +48,32 @@ public class Test2 implements ITestListener {
 		}
 		driver.quit();
 	}
-	
+
 	@Test
 	public void wegmansManu() throws MalformedURLException, IOException {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.wegmans.com/");
-		List<WebElement>manu = driver.findElements(By.cssSelector("ul[class=\"categories-menu\"] li a"));
-		for(WebElement mlist: manu) {
+		List<WebElement> manu = driver.findElements(By.cssSelector("ul[class=\"categories-menu\"] li a"));
+		for (WebElement mlist : manu) {
 			System.out.println(mlist.getText());
 			String manuName = mlist.getAttribute("href");
 			HttpURLConnection connection = (HttpURLConnection) new URL(manuName).openConnection();
 			connection.setRequestMethod("HEAD");
 			connection.connect();
 			int code = connection.getResponseCode();
-			if (code>400) {
+			if (code > 400) {
 				System.out.println(mlist.getText());
 				Assert.assertTrue(false);
-				
+
 			}
-			
+
 		}
 		driver.close();
 	}
 
-	//@Test
+	// @Test
 	public void bedssl() {
 		ChromeOptions options = new ChromeOptions();
 		options.setAcceptInsecureCerts(true);
@@ -84,7 +84,7 @@ public class Test2 implements ITestListener {
 
 	}
 
-	//@Test
+	// @Test
 	public void test2() throws IOException, InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
