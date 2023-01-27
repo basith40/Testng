@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-24T20:07:48 EST" name="Default suite" finished-at="2023-01-24T20:07:55 EST" duration-ms="7144">
+  <suite started-at="2023-01-26T10:26:34 EST" name="Default suite" finished-at="2023-01-26T10:27:43 EST" duration-ms="68635">
     <groups>
     </groups>
-    <test started-at="2023-01-24T20:07:48 EST" name="Default test" finished-at="2023-01-24T20:07:55 EST" duration-ms="7144">
+    <test started-at="2023-01-26T10:26:34 EST" name="Default test" finished-at="2023-01-26T10:27:43 EST" duration-ms="68635">
       <class name="test1.Test2">
-        <test-method signature="wegmansManu()[pri:0, instance:test1.Test2@51e5fc98]" started-at="2023-01-24T20:07:48 EST" name="wegmansManu" finished-at="2023-01-24T20:07:55 EST" duration-ms="7133" status="PASS">
+        <test-method signature="errorPage()[pri:0, instance:test1.Test2@48fa0f47]" started-at="2023-01-26T10:26:34 EST" name="errorPage" finished-at="2023-01-26T10:27:43 EST" duration-ms="68622" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wegmansManu -->
+        </test-method> <!-- errorPage -->
       </class> <!-- test1.Test2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

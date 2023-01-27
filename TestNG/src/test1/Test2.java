@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -17,14 +18,45 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestListener;
 import org.testng.annotations.Test;
 
 public class Test2 implements ITestListener {
 	WebDriver driver;
+	@Test
+	public void errorPage() throws MalformedURLException, IOException {
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://automationstepbystep.com/");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".popmake-close")));
+		driver.findElement(By.cssSelector(".popmake-close")).click();
+		List <WebElement> firstBar = driver.findElements(By.cssSelector("nav ul .menu-item a"));
+		for(WebElement myElement : firstBar) {
+			String links = myElement.getAttribute("href");
+			System.out.println(myElement.getText());
+		HttpURLConnection connection =	(HttpURLConnection) new URL(links).openConnection();
+		connection.setRequestMethod("HEAD");
+		connection.connect();
+		int code = connection.getResponseCode();
+		if(code>400) {
+			Assert.assertTrue(false);
+		}
+		}	
+			WebElement manu = firstBar.stream().filter(bar->bar.getText().contains("Training")).findFirst().orElse(null);		
+		manu.click();
+		File ssFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(ssFile, new File("/users/basith301/downloads/ji.png"));
+	
+		driver.close();
 
-	// @Test
+	}
+
+	@Test
 	public void linkbroke() throws MalformedURLException, IOException, InterruptedException {
 		driver = new SafariDriver();
 		driver.manage().window().maximize();
@@ -73,7 +105,7 @@ public class Test2 implements ITestListener {
 		driver.close();
 	}
 
-	// @Test
+	@Test
 	public void bedssl() {
 		ChromeOptions options = new ChromeOptions();
 		options.setAcceptInsecureCerts(true);
@@ -84,7 +116,7 @@ public class Test2 implements ITestListener {
 
 	}
 
-	// @Test
+	@Test
 	public void test2() throws IOException, InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
