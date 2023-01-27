@@ -30,6 +30,7 @@ public class BrokenLink {
 			Assert.assertTrue(false);
 		}
 	}
+		driver.close();
 	}
 
 }

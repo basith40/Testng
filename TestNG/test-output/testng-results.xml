@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-26T10:26:34 EST" name="Default suite" finished-at="2023-01-26T10:27:43 EST" duration-ms="68635">
+  <suite started-at="2023-01-27T08:52:24 EST" name="Suite" finished-at="2023-01-27T08:55:08 EST" duration-ms="163294">
     <groups>
     </groups>
-    <test started-at="2023-01-26T10:26:34 EST" name="Default test" finished-at="2023-01-26T10:27:43 EST" duration-ms="68635">
+    <test started-at="2023-01-27T08:52:24 EST" name="Test" finished-at="2023-01-27T08:55:08 EST" duration-ms="163294">
+      <class name="test1.day1">
+        <test-method signature="demo()[pri:0, instance:test1.day1@3967e60c]" started-at="2023-01-27T08:52:47 EST" name="demo" finished-at="2023-01-27T08:53:11 EST" duration-ms="23846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+      </class> <!-- test1.day1 -->
       <class name="test1.Test2">
-        <test-method signature="errorPage()[pri:0, instance:test1.Test2@48fa0f47]" started-at="2023-01-26T10:26:34 EST" name="errorPage" finished-at="2023-01-26T10:27:43 EST" duration-ms="68622" status="PASS">
+        <test-method signature="bedssl()[pri:0, instance:test1.Test2@60d8c9b7]" started-at="2023-01-27T08:53:11 EST" name="bedssl" finished-at="2023-01-27T08:53:17 EST" duration-ms="5513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bedssl -->
+        <test-method signature="errorPage()[pri:0, instance:test1.Test2@60d8c9b7]" started-at="2023-01-27T08:53:17 EST" name="errorPage" finished-at="2023-01-27T08:54:23 EST" duration-ms="66432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- errorPage -->
+        <test-method signature="linkbroke()[pri:0, instance:test1.Test2@60d8c9b7]" started-at="2023-01-27T08:54:23 EST" name="linkbroke" finished-at="2023-01-27T08:54:28 EST" duration-ms="5102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- linkbroke -->
+        <test-method signature="test2()[pri:0, instance:test1.Test2@60d8c9b7]" started-at="2023-01-27T08:54:28 EST" name="test2" finished-at="2023-01-27T08:55:00 EST" duration-ms="32273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="wegmansManu()[pri:0, instance:test1.Test2@60d8c9b7]" started-at="2023-01-27T08:55:00 EST" name="wegmansManu" finished-at="2023-01-27T08:55:08 EST" duration-ms="7197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wegmansManu -->
       </class> <!-- test1.Test2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="test1.BrokenLink">
+        <test-method signature="linkBroken()[pri:0, instance:test1.BrokenLink@75329a49]" started-at="2023-01-27T08:52:24 EST" name="linkBroken" finished-at="2023-01-27T08:52:47 EST" duration-ms="22903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- linkBroken -->
+      </class> <!-- test1.BrokenLink -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-10T18:02:20 EST" name="Default suite" finished-at="2023-01-10T18:02:36 EST" duration-ms="16031">
+    <groups>
+    </groups>
+    <test started-at="2023-01-10T18:02:20 EST" name="Default test" finished-at="2023-01-10T18:02:36 EST" duration-ms="16031">
+      <class name="pageObjectPositiveTest.PositiveTest">
+        <test-method is-config="true" signature="browserSelect()[pri:0, instance:pageObjectPositiveTest.PositiveTest@273e7444]" started-at="2023-01-10T18:02:20 EST" name="browserSelect" finished-at="2023-01-10T18:02:34 EST" duration-ms="13474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSelect -->
+        <test-method signature="loginToTheApplication()[pri:0, instance:pageObjectPositiveTest.PositiveTest@273e7444]" started-at="2023-01-10T18:02:34 EST" name="loginToTheApplication" finished-at="2023-01-10T18:02:36 EST" duration-ms="2495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToTheApplication -->
+      </class> <!-- pageObjectPositiveTest.PositiveTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
