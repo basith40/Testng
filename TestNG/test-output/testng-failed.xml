@@ -5,7 +5,9 @@
     <classes>
       <class name="test1.Test2">
         <methods>
-          <include name="errorPage"/>
+          <include name="test2"/>
+          <include name="config"/>
+          <include name="endConfig"/>
         </methods>
       </class> <!-- test1.Test2 -->
     </classes>

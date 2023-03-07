@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class BrokenLink {
+public class BrokenLinkTest {
 	@Test
 	public void linkBroken() throws MalformedURLException, IOException {
 		WebDriver driver = new ChromeDriver();
